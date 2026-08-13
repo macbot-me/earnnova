@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarnNova</title>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            color: #222;
+        }
+
+        .app {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px 18px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            color: #777;
+        }
+
+        .balance {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .balance span {
+            display: block;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .balance strong {
+            font-size: 35px;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 14px;
+            margin-top: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .earn {
+            background: #229ed9;
+            color: white;
+        }
+
+        .withdraw {
+            background: white;
+            color: #222;
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="header">
+        <h1>💰 EarnNova</h1>
+        <p>Earn rewards by completing activities.</p>
+    </div>
+
+    <div class="balance">
+        <span>Your Balance</span>
+        <strong id="balance">0</strong>
+        <div>coins</div>
+    </div>
+
+    <button class="earn" onclick="watchAd()">
+        🎬 Watch Ad & Earn
+    </button>
+
+    <button class="withdraw" onclick="withdraw()">
+        💸 Withdraw
+    </button>
+
+    <div class="info">
+        Complete activities to increase your balance.
+    </div>
+
+</div>
+
+<script>
+
+    const tg = window.Telegram.WebApp;
+
+    tg.ready();
+    tg.expand();
+
+    function watchAd() {
+        alert("The advertising system will be connected here.");
+    }
+
+    function withdraw() {
+        alert("Withdrawal system coming soon.");
+    }
+
+</script>
+
+</body>
+</html>
