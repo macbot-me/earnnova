@@ -93,7 +93,7 @@
 
     <div class="header">
         <h1>💰 EarnNova</h1>
-        <p>Earn rewards by completing activities.</p>
+        <p id="welcome">Earn rewards by completing activities.</p>
     </div>
 
     <div class="balance">
@@ -121,9 +121,16 @@
     const tg = window.Telegram.WebApp;
 
     tg.ready();
-    tg.expand();
+tg.expand();
 
-    function watchAd() {
+const user = tg.initDataUnsafe.user;
+
+if (user) {
+    document.getElementById("welcome").textContent =
+        "👋 Welcome, " + user.first_name;
+}
+
+function watchAd() {
         alert("The advertising system will be connected here.");
     }
 
