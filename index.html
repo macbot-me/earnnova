@@ -197,12 +197,12 @@
 
         if (error) {
 
-            console.error("Registration error:", error);
+    console.error("Registration error:", error);
 
-            document.getElementById("welcome").textContent =
-                "⚠️ Database connection error.";
+    document.getElementById("welcome").textContent =
+        "⚠️ " + error.message;
 
-            return;
+    return;
         }
 
 
